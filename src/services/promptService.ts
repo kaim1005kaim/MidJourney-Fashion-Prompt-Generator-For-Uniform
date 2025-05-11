@@ -145,6 +145,10 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
           genderModel = "female model";
         }
       }
+    } else {
+      // フィルターで性別が指定されていない場合、デフォルトはユニセックス
+      gender = "unisex";
+      genderModel = "person";
     }
     
     // プロンプト変数を選択
@@ -167,6 +171,9 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     
     // 人物は一人だけであることを明示
     promptBase += `, single person`;
+    
+    // シンプルな背景を指定して制服に焦点を当てる
+    promptBase += `, simple white background, no background elements, studio shot`;
     
     // ライティングと品質設定を追加
     promptBase += `, ${lighting}, ${quality}, ${resolution}, photorealistic`;

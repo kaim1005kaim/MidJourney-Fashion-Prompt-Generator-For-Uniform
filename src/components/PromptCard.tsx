@@ -55,6 +55,11 @@ export default function PromptCard({
       
       {/* 要素タグ */}
       <div className="flex flex-wrap gap-2 mt-2 text-sm">
+        {prompt.gender && (
+          <span className="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-100 px-2 py-1 rounded">
+            {prompt.gender === "male" ? "男性" : prompt.gender === "female" ? "女性" : "ユニセックス"}
+          </span>
+        )}
         {prompt.brandName && (
           <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 px-2 py-1 rounded">
             {prompt.brandName}
@@ -75,6 +80,9 @@ export default function PromptCard({
             {prompt.silhouette.split(' ').slice(0, 2).join(' ')}
           </span>
         )}
+        <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+          シンプル背景
+        </span>
       </div>
       
       <div className="flex items-center justify-between mt-4">

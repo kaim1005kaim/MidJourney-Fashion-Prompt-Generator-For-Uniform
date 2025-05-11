@@ -3,6 +3,24 @@ import React, { useState } from 'react';
 import { UniformType, FilterOptions } from '../types';
 import { ChevronDown, ChevronUp, Filter, X } from 'lucide-react';
 
+// 制服タイプの英語→日本語変換
+const uniformTypeTranslations: { [key: string]: string } = {
+  "Caregiver Uniform": "介護士制服",
+  "Cleaning Staff Uniform": "清掃スタッフ制服",
+  "Construction Worker Uniform": "建設作業員制服",
+  "Event Staff (General) Uniform": "イベントスタッフ制服",
+  "Factory Worker Uniform": "工場作業員制服",
+  "Hospital Staff (Doctor) Uniform": "病院スタッフ(医師)制服",
+  "Hospital Staff (Nurse/Medical) Uniform": "病院スタッフ(看護師/医療)制服",
+  "Hotel Housekeeping Uniform": "ホテルハウスキーピング制服",
+  "Hotel Staff (Front/Bell) Uniform": "ホテルスタッフ(フロント/ベル)制服",
+  "Railway Staff Uniform": "鉄道スタッフ制服",
+  "Receptionist Uniform": "受付スタッフ制服",
+  "Restaurant Chef / Kitchen Staff Uniform": "レストランシェフ/キッチンスタッフ制服",
+  "Restaurant Staff (Casual) Uniform": "レストランスタッフ(カジュアル)制服",
+  "Restaurant Staff (Formal) Uniform": "レストランスタッフ(フォーマル)制服"
+};
+
 // 英語から日本語への変換マッピング
 const industryTranslations: { [key: string]: string } = {
   "Restaurants": "レストラン",
@@ -318,7 +336,7 @@ export default function FilterPanel({ uniformTypes, filters, onFilterChange }: F
                     htmlFor={`uniform-${uniform.uniform_id}`}
                     className="ml-2 text-sm text-gray-700 dark:text-gray-300"
                   >
-                    {uniform.uniform_name}
+                    {uniformTypeTranslations[uniform.uniform_name] || uniform.uniform_name}
                   </label>
                 </div>
               ))}
@@ -335,13 +353,16 @@ export default function FilterPanel({ uniformTypes, filters, onFilterChange }: F
                   onClick={() => handleGenderChange(gender)}
                   className={`px-3 py-1 text-sm rounded-full transition-colors
                     ${filters.genders.includes(gender)
-                      ? 'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-100 border border-pink-200 dark:border-pink-700'
+                      ? 'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-100 border border-pink-200 dark:border-pink-700 font-semibold'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                 >
                   {genderTranslations[gender] || gender}
                 </button>
               ))}
+            </div>
+            <div className="mt-1 text-xs text-gray-500">
+              ※性別を選択すると、プロンプトにその性別が反映されます
             </div>
           </div>
           

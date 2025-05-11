@@ -7,8 +7,9 @@
       "key_elements": ["polo shirt", "t-shirt", "apron", "chino pants", "denim pants", "bandana", "cap"],
       "materials": ["cotton", "polyester blend", "denim", "canvas"],
       "color_palette": ["black", "charcoal grey", "navy", "khaki", "brown", "burgundy", "terracotta", "off-white", "vivid colors"],
-      "industries": ["飲食店 (Cafe, Izakaya, Fast Food)"],
-      "style_keywords": ["casual", "easy to move in", "approachable", "modern casual", "street style", "workwear style"]
+      "industries": ["Restaurants", "Cafes", "Fast Food"],
+      "style_keywords": ["casual", "easy to move in", "approachable", "modern casual", "street style", "workwear style"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "restaurant_server_formal",
@@ -17,8 +18,9 @@
       "key_elements": ["dress shirt", "blouse", "vest", "sommelier apron", "salon apron", "slacks", "skirt", "tie", "scarf"],
       "materials": ["polyester blend", "wool blend", "cotton broadcloth", "twill"],
       "color_palette": ["black", "navy", "charcoal grey", "grey", "white", "wine red", "bottle green", "beige", "pinstripe pattern", "check pattern"],
-      "industries": ["飲食店 (Restaurant, Dining Bar, Hotel Restaurant)"],
-      "style_keywords": ["formal", "elegant", "sophisticated", "classic", "professional", "refined"]
+      "industries": ["Restaurants", "Dining Bars", "Hotel Restaurants"],
+      "style_keywords": ["formal", "elegant", "sophisticated", "classic", "professional", "refined"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "restaurant_chef",
@@ -27,8 +29,9 @@
       "key_elements": ["chef coat", "chef shirt", "chef pants", "apron", "bandana", "chef hat", "beret"],
       "materials": ["cotton", "polyester cotton", "twill"],
       "color_palette": ["white", "black", "stripe pattern", "check pattern", "grey", "navy"],
-      "industries": ["飲食店 (All types)"],
-      "style_keywords": ["hygienic", "functional", "durable", "professional", "classic", "modern"]
+      "industries": ["Restaurants"],
+      "style_keywords": ["hygienic", "functional", "durable", "professional", "classic", "modern"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "event_staff_general",
@@ -37,8 +40,9 @@
       "key_elements": ["polo shirt", "t-shirt", "blouson", "jumper", "vest", "cap", "lanyard", "cargo pants", "chino pants"],
       "materials": ["polyester", "cotton", "nylon", "fleece"],
       "color_palette": ["vivid colors", "corporate colors", "black", "white", "grey", "navy", "neon colors"],
-      "industries": ["イベントスタッフ"],
-      "style_keywords": ["visible", "easy to move in", "casual", "sporty", "teamwear", "branding"]
+      "industries": ["Events"],
+      "style_keywords": ["visible", "easy to move in", "casual", "sporty", "teamwear", "branding"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "railway_staff",
@@ -47,8 +51,9 @@
       "key_elements": ["service cap", "jacket", "slacks", "skirt", "vest", "dress shirt", "blouse", "tie", "scarf", "gloves"],
       "materials": ["wool blend", "polyester blend", "durable synthetics"],
       "color_palette": ["navy", "grey", "black", "white", "accent colors (stripes, logos)"],
-      "industries": ["鉄道"],
-      "style_keywords": ["professional", "reliable", "authoritative", "classic", "sharp", "durable"]
+      "industries": ["Railways"],
+      "style_keywords": ["professional", "reliable", "authoritative", "classic", "sharp", "durable"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "hotel_front_bell",
@@ -57,8 +62,9 @@
       "key_elements": ["blazer", "vest", "slacks", "skirt", "dress shirt", "blouse", "tie", "scarf", "gloves", "service cap (bellhop)", "epaulets"],
       "materials": ["wool blend", "polyester blend", "silk-like fabric"],
       "color_palette": ["navy", "black", "charcoal grey", "burgundy", "bottle green", "white", "gold accents", "silver accents", "pinstripe"],
-      "industries": ["ホテル"],
-      "style_keywords": ["elegant", "formal", "luxurious", "sophisticated", "classic", "hospitality"]
+      "industries": ["Hotels"],
+      "style_keywords": ["elegant", "formal", "luxurious", "sophisticated", "classic", "hospitality"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "hotel_housekeeping",
@@ -67,8 +73,9 @@
       "key_elements": ["tunic", "polo shirt", "slacks", "skirt", "apron"],
       "materials": ["polyester cotton", "stretch fabric"],
       "color_palette": ["beige", "grey", "light blue", "pink", "white", "stripe pattern"],
-      "industries": ["ホテル"],
-      "style_keywords": ["easy to move in", "hygienic", "clean look", "practical", "understated"]
+      "industries": ["Hotels"],
+      "style_keywords": ["easy to move in", "hygienic", "clean look", "practical", "understated"],
+      "gender": "unisex"
     },
      {
       "uniform_id": "receptionist_general",
@@ -77,8 +84,9 @@
       "key_elements": ["blouse", "cut and sew top", "cardigan", "jacket", "vest", "skirt", "slacks", "dress", "scarf"],
       "materials": ["polyester blend", "cotton", "knit"],
       "color_palette": ["neutrals (beige, grey, navy, black)", "white", "pastel colors", "corporate colors"],
-      "industries": ["受付スタッフ", "ホテル", "病院 (Clinic Reception)", "Corporate Reception"],
-      "style_keywords": ["professional", "approachable", "neat", "elegant", "trustworthy", "clean"]
+      "industries": ["Reception", "Hotels", "Clinics", "Corporations"],
+      "style_keywords": ["professional", "approachable", "neat", "elegant", "trustworthy", "clean"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "factory_worker",
@@ -87,8 +95,9 @@
       "key_elements": ["coveralls", "work jacket", "work pants", "safety shoes", "helmet", "safety vest", "gloves", "tool pockets"],
       "materials": ["heavy-duty cotton", "polyester-cotton", "flame-retardant fabric", "reinforcement fabric"],
       "color_palette": ["grey", "navy", "khaki", "green", "blue", "orange (safety)", "yellow (safety)"],
-      "industries": ["工場"],
-      "style_keywords": ["durable", "functional", "protective", "safety first", "practical", "industrial"]
+      "industries": ["Factories"],
+      "style_keywords": ["durable", "functional", "protective", "safety first", "practical", "industrial"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "construction_worker",
@@ -97,8 +106,9 @@
       "key_elements": ["work suit (top and bottom)", "safety vest", "helmet", "safety boots", "safety harness", "pants with tool pockets"],
       "materials": ["high-strength polyester", "heavy-duty cotton canvas", "waterproof breathable fabric", "reflective material"],
       "color_palette": ["khaki", "brown", "grey", "orange (safety)", "yellow (safety)", "navy"],
-      "industries": ["建築"],
-      "style_keywords": ["rugged", "protective", "high visibility", "functional", "tough", "outdoor work"]
+      "industries": ["Construction"],
+      "style_keywords": ["rugged", "protective", "high visibility", "functional", "tough", "outdoor work"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "cleaning_staff",
@@ -107,8 +117,9 @@
       "key_elements": ["polo shirt", "t-shirt", "tunic", "slacks", "pants", "apron"],
       "materials": ["polyester cotton", "quick-dry fabric", "stretch fabric"],
       "color_palette": ["green", "blue", "grey", "white", "purple", "navy", "pastel colors"],
-      "industries": ["清掃", "ホテル", "病院", "Building Maintenance"],
-      "style_keywords": ["practical", "clean look", "comfortable", "easy to move in", "hygienic", "simple"]
+      "industries": ["Cleaning", "Hotels", "Hospitals", "Building Maintenance"],
+      "style_keywords": ["practical", "clean look", "comfortable", "easy to move in", "hygienic", "simple"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "hospital_nurse_medical",
@@ -117,8 +128,9 @@
       "key_elements": ["scrubs (top, pants)", "white coat", "Kansai style scrub top", "nursing shoes", "medical gown", "surgical gown"],
       "materials": ["polyester cotton (shrink-resistant, wrinkle-resistant)", "stretch fabric", "antibacterial fabric"],
       "color_palette": ["light blue", "green", "navy", "pink", "white", "grey", "burgundy", "print patterns (pediatrics etc.)"],
-      "industries": ["病院", "Clinic"],
-      "style_keywords": ["hygienic", "functional", "comfortable", "professional", "quick-dry", "durable"]
+      "industries": ["Hospitals", "Clinics"],
+      "style_keywords": ["hygienic", "functional", "comfortable", "professional", "quick-dry", "durable"],
+      "gender": "unisex"
     },
      {
       "uniform_id": "hospital_doctor",
@@ -127,8 +139,9 @@
       "key_elements": ["white coat (long sleeve, short sleeve)", "scrubs", "lab coat"],
       "materials": ["cotton", "polyester cotton"],
       "color_palette": ["white", "navy", "black (some cases)"],
-      "industries": ["病院", "クリニック", "Research Institutions"],
-      "style_keywords": ["authority", "cleanliness", "professional", "classic", "functional"]
+      "industries": ["Hospitals", "Clinics", "Research Institutions"],
+      "style_keywords": ["authority", "cleanliness", "professional", "classic", "functional"],
+      "gender": "unisex"
     },
     {
       "uniform_id": "caregiver_staff",
@@ -137,8 +150,9 @@
       "key_elements": ["polo shirt", "t-shirt", "tunic", "easy-fit pants", "cardigan", "apron", "stretch pants"],
       "materials": ["polyester cotton", "stretch fabric", "knit", "fleece (outerwear)"],
       "color_palette": ["pastel colors (pink, blue, green)", "beige", "grey", "navy", "brown", "soft colors"],
-      "industries": ["介護施設", "病院 (Geriatric Care Ward)", "Home Care"],
-      "style_keywords": ["comfortable", "easy to move in", "approachable", "hygienic", "easy to wash", "gentle impression"]
+      "industries": ["Care Facilities", "Hospitals (Geriatric Care)", "Home Care"],
+      "style_keywords": ["comfortable", "easy to move in", "approachable", "hygienic", "easy to wash", "gentle impression"],
+      "gender": "unisex"
     }
   ],
   "phrase_variations": {
@@ -177,6 +191,10 @@
       "--ar 1:1 --stylize 650",
       "--ar 4:5 --stylize 800",
       "--style raw"
+    ],
+    "gender": [
+        "male model",
+        "female model"
     ]
   }
 }

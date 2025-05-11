@@ -412,6 +412,15 @@ export default function PromptGenerator() {
           <DatabaseStatus className="text-right" />
         </div>
         
+        <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-4 mb-8 text-blue-800 dark:text-blue-200 text-sm">
+          <p className="font-medium mb-2">プロンプト生成の改善点：</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>性別フィルターがプロンプトに正しく反映されるようになりました</li>
+            <li>制服タイプの表示が日本語化されました</li>
+            <li>背景をシンプルにして制服デザインに焦点を当てるように改善しました</li>
+          </ul>
+        </div>
+        
         {/* 設定パネル */}
         <SettingsPanel 
           settings={settings} 
