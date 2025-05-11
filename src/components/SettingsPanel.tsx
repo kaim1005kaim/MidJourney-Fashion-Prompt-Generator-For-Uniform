@@ -104,6 +104,25 @@ export default function SettingsPanel({ settings, onSettingsChange, onDatabaseUp
           <div className="space-y-4">
             <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">プロンプトオプション</h4>
             
+            {/* 日本人モデル設定 */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="use-japanese-model"
+                  checked={settings.useJapaneseModel}
+                  onChange={(e) => handleSettingChange('useJapaneseModel', e.target.checked)}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="use-japanese-model" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  日本人モデルを使用する
+                </label>
+              </div>
+              <p className="ml-6 text-xs text-gray-500 dark:text-gray-400">
+                プロンプトに「Japanese person」または「Asian person」を追加します
+              </p>
+            </div>
+            
             {/* アスペクト比設定 */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center">

@@ -51,7 +51,8 @@ export default function PromptGenerator() {
     version: "--v 7.0",
     includeStylize: true,
     stylize: "s100",
-    customSuffix: ''
+    customSuffix: '',
+    useJapaneseModel: false
   });
   const [activeTab, setActiveTab] = useState<'prompts' | 'favorites' | 'history'>('prompts');
   const [isLoading, setIsLoading] = useState(true);
@@ -418,6 +419,7 @@ export default function PromptGenerator() {
             <li>性別フィルターがプロンプトに正しく反映されるようになりました</li>
             <li>制服タイプの表示が日本語化されました</li>
             <li>背景をシンプルにして制服デザインに焦点を当てるように改善しました</li>
+            <li><b>新機能：</b> 設定から日本人モデルを固定するオプションを追加しました</li>
           </ul>
         </div>
         

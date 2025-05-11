@@ -159,7 +159,22 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     
     // プロンプトの基本部分を構築
     // 全身ショットを指定するために "A full-body shot" を追加
-    let promptBase = `A ${photoStyle} of a full-body shot of ${genderModel ? genderModel + " wearing a" : "person wearing a"}`;
+    let promptBase = `A ${photoStyle} of a full-body shot of `;
+    
+    // 日本人モデル設定が有効な場合
+    if (settings.useJapaneseModel) {
+      // 性別に応じて日本人モデルを指定
+      if (gender === "male") {
+        promptBase += `Japanese male model wearing a`;
+      } else if (gender === "female") {
+        promptBase += `Japanese female model wearing a`;
+      } else {
+        promptBase += `Japanese person wearing a`;
+      }
+    } else {
+      // 通常のモデル指定
+      promptBase += `${genderModel ? genderModel + " wearing a" : "person wearing a"}`;
+    }
     
     // 業界が指定されている場合は追加
     if (industry) {

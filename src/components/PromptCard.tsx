@@ -58,6 +58,7 @@ export default function PromptCard({
         {prompt.gender && (
           <span className="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-100 px-2 py-1 rounded">
             {prompt.gender === "male" ? "男性" : prompt.gender === "female" ? "女性" : "ユニセックス"}
+            {prompt.fullPrompt.includes("Japanese") && "（日本人）"}
           </span>
         )}
         {prompt.brandName && (

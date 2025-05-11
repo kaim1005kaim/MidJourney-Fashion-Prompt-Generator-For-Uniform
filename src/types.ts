@@ -77,4 +77,5 @@ export interface AppSettings {
   includeStylize: boolean;
   stylize: string; // 選択されたスタイライズ値
   customSuffix: string;
+  useJapaneseModel: boolean; // 日本人モデルを使用するかどうか
 }
