@@ -135,7 +135,7 @@ const DatabaseManager: React.FC<DatabaseStatusProps> = ({ onDataUpdate }) => {
       
       <div className="mb-4">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          <span className="font-medium">ブランド：</span> 
+          <span className="font-medium">制服データ：</span> 
           {status.loadedBrands} / {status.totalBrands} 件読み込み済み 
           ({Math.round((status.loadedBrands / status.totalBrands) * 100)}%)
         </p>
@@ -167,7 +167,7 @@ const DatabaseManager: React.FC<DatabaseStatusProps> = ({ onDataUpdate }) => {
             disabled={loading}
             className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded disabled:opacity-50"
           >
-            すべてのブランドを読み込む
+            すべての制服を読み込む
           </button>
         )}
         

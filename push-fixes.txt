@@ -1,0 +1,16 @@
+# 修正をGitHubにプッシュするコマンド
+
+# プロジェクトディレクトリに移動
+cd "D:\development\MidJourney Fashion Prompt Generator_Uniform\project"
+
+# 変更をステージング
+git add scripts/migrateUniformData.js
+git add src/services/dataService.ts
+git add src/components/database/DatabaseManager.tsx
+git add src/components/database/DatabaseStatus.tsx
+
+# コミット
+git commit -m "fix: データベース関連のエラーを修正・ESモジュール対応"
+
+# プッシュ
+git push origin main

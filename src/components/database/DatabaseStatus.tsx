@@ -36,7 +36,7 @@ const DatabaseStatus: React.FC<DatabaseStatusProps> = ({ className }) => {
   
   return (
     <div className={`text-xs text-gray-500 dark:text-gray-400 ${className || ''}`}>
-      ブランドデータ: {status.loadedBrands}/{status.totalBrands} ({percentage}%)
+      制服データ: {status.loadedBrands}/{status.totalBrands} ({percentage}%)
     </div>
   );
 };
