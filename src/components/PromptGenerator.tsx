@@ -1,9 +1,10 @@
 // components/PromptGenerator.tsx
 import React, { useState, useEffect } from 'react';
-import { Wand2, Copy, Bookmark, History, X, Database } from 'lucide-react';
+import { Wand2, Copy, Bookmark, History, X, Database, Sparkles } from 'lucide-react';
 import FilterPanel from './FilterPanel';
 import PromptCard from './PromptCard';
 import SettingsPanel from './SettingsPanel';
+import EnhancedPromptGenerator from './EnhancedPromptGenerator';
 import { DatabaseStatus } from './database/index';
 import { UniformType, FilterOptions, PhraseVariations, Prompt, AppSettings } from '../types';
 import { 
@@ -54,7 +55,7 @@ export default function PromptGenerator() {
     customSuffix: '',
     useJapaneseModel: false
   });
-  const [activeTab, setActiveTab] = useState<'prompts' | 'favorites' | 'history'>('prompts');
+  const [activeTab, setActiveTab] = useState<'prompts' | 'favorites' | 'history' | 'enhanced'>('prompts');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -420,6 +421,7 @@ export default function PromptGenerator() {
             <li>制服タイプの表示が日本語化されました</li>
             <li>背景をシンプルにして制服デザインに焦点を当てるように改善しました</li>
             <li><b>新機能：</b> 設定から日本人モデルを固定するオプションを追加しました</li>
+            <li><b>新機能：</b> タブから「拡張プロンプト生成」が利用可能になりました。詳細設定をカスタマイズしたプロンプトを生成できます！</li>
           </ul>
         </div>
         
@@ -518,6 +520,17 @@ export default function PromptGenerator() {
               生成したプロンプト ({prompts.length})
             </button>
             <button
+              onClick={() => setActiveTab('enhanced')}
+              className={`py-2 px-1 flex items-center ${
+                activeTab === 'enhanced'
+                  ? 'border-b-2 border-blue-500 text-blue-600 dark:text-blue-400'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+              }`}
+            >
+              <Sparkles className="w-4 h-4 mr-1" />
+              拡張プロンプト生成
+            </button>
+            <button
               onClick={() => setActiveTab('favorites')}
               className={`py-2 px-1 flex items-center ${
                 activeTab === 'favorites'
@@ -543,7 +556,7 @@ export default function PromptGenerator() {
         </div>
         
         {/* プロンプト一覧 */}
-        {!isLoading && (
+        {!isLoading && activeTab !== 'enhanced' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {activePrompts.length > 0 ? (
               activePrompts.map((prompt, index) => (
@@ -565,6 +578,17 @@ export default function PromptGenerator() {
               </div>
             )}
           </div>
+        )}
+        
+        {/* 拡張プロンプトジェネレーター */}
+        {!isLoading && activeTab === 'enhanced' && (
+          <EnhancedPromptGenerator
+            uniformTypes={uniformTypes}
+            phraseVariations={phraseVariations}
+            filters={filters}
+            settings={settings}
+            onCopy={copyPrompt}
+          />
         )}
       </div>
       
