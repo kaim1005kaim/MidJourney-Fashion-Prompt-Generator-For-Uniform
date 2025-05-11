@@ -1,0 +1,182 @@
+{
+  "uniform_types": [
+    {
+      "uniform_id": "restaurant_server_casual",
+      "uniform_name": "Restaurant Staff (Casual) Uniform",
+      "description": "Staff uniform for casual dining establishments.",
+      "key_elements": ["polo shirt", "t-shirt", "apron", "chino pants", "denim pants", "bandana", "cap"],
+      "materials": ["cotton", "polyester blend", "denim", "canvas"],
+      "color_palette": ["black", "charcoal grey", "navy", "khaki", "brown", "burgundy", "terracotta", "off-white", "vivid colors"],
+      "industries": ["飲食店 (Cafe, Izakaya, Fast Food)"],
+      "style_keywords": ["casual", "easy to move in", "approachable", "modern casual", "street style", "workwear style"]
+    },
+    {
+      "uniform_id": "restaurant_server_formal",
+      "uniform_name": "Restaurant Staff (Formal) Uniform",
+      "description": "Staff uniform for formal or upscale dining establishments.",
+      "key_elements": ["dress shirt", "blouse", "vest", "sommelier apron", "salon apron", "slacks", "skirt", "tie", "scarf"],
+      "materials": ["polyester blend", "wool blend", "cotton broadcloth", "twill"],
+      "color_palette": ["black", "navy", "charcoal grey", "grey", "white", "wine red", "bottle green", "beige", "pinstripe pattern", "check pattern"],
+      "industries": ["飲食店 (Restaurant, Dining Bar, Hotel Restaurant)"],
+      "style_keywords": ["formal", "elegant", "sophisticated", "classic", "professional", "refined"]
+    },
+    {
+      "uniform_id": "restaurant_chef",
+      "uniform_name": "Restaurant Chef / Kitchen Staff Uniform",
+      "description": "Kitchen staff uniform emphasizing hygiene and functionality.",
+      "key_elements": ["chef coat", "chef shirt", "chef pants", "apron", "bandana", "chef hat", "beret"],
+      "materials": ["cotton", "polyester cotton", "twill"],
+      "color_palette": ["white", "black", "stripe pattern", "check pattern", "grey", "navy"],
+      "industries": ["飲食店 (All types)"],
+      "style_keywords": ["hygienic", "functional", "durable", "professional", "classic", "modern"]
+    },
+    {
+      "uniform_id": "event_staff_general",
+      "uniform_name": "Event Staff (General) Uniform",
+      "description": "Staff uniform suitable for various events.",
+      "key_elements": ["polo shirt", "t-shirt", "blouson", "jumper", "vest", "cap", "lanyard", "cargo pants", "chino pants"],
+      "materials": ["polyester", "cotton", "nylon", "fleece"],
+      "color_palette": ["vivid colors", "corporate colors", "black", "white", "grey", "navy", "neon colors"],
+      "industries": ["イベントスタッフ"],
+      "style_keywords": ["visible", "easy to move in", "casual", "sporty", "teamwear", "branding"]
+    },
+    {
+      "uniform_id": "railway_staff",
+      "uniform_name": "Railway Staff Uniform",
+      "description": "Railway staff uniform combining safety and reliability.",
+      "key_elements": ["service cap", "jacket", "slacks", "skirt", "vest", "dress shirt", "blouse", "tie", "scarf", "gloves"],
+      "materials": ["wool blend", "polyester blend", "durable synthetics"],
+      "color_palette": ["navy", "grey", "black", "white", "accent colors (stripes, logos)"],
+      "industries": ["鉄道"],
+      "style_keywords": ["professional", "reliable", "authoritative", "classic", "sharp", "durable"]
+    },
+    {
+      "uniform_id": "hotel_front_bell",
+      "uniform_name": "Hotel Staff (Front/Bell) Uniform",
+      "description": "Uniform showing elegance and prestige as the face of the hotel.",
+      "key_elements": ["blazer", "vest", "slacks", "skirt", "dress shirt", "blouse", "tie", "scarf", "gloves", "service cap (bellhop)", "epaulets"],
+      "materials": ["wool blend", "polyester blend", "silk-like fabric"],
+      "color_palette": ["navy", "black", "charcoal grey", "burgundy", "bottle green", "white", "gold accents", "silver accents", "pinstripe"],
+      "industries": ["ホテル"],
+      "style_keywords": ["elegant", "formal", "luxurious", "sophisticated", "classic", "hospitality"]
+    },
+    {
+      "uniform_id": "hotel_housekeeping",
+      "uniform_name": "Hotel Housekeeping Uniform",
+      "description": "Housekeeping uniform emphasizing ease of movement and cleanliness.",
+      "key_elements": ["tunic", "polo shirt", "slacks", "skirt", "apron"],
+      "materials": ["polyester cotton", "stretch fabric"],
+      "color_palette": ["beige", "grey", "light blue", "pink", "white", "stripe pattern"],
+      "industries": ["ホテル"],
+      "style_keywords": ["easy to move in", "hygienic", "clean look", "practical", "understated"]
+    },
+     {
+      "uniform_id": "receptionist_general",
+      "uniform_name": "Receptionist Uniform",
+      "description": "Receptionist uniform giving a friendly and trustworthy impression.",
+      "key_elements": ["blouse", "cut and sew top", "cardigan", "jacket", "vest", "skirt", "slacks", "dress", "scarf"],
+      "materials": ["polyester blend", "cotton", "knit"],
+      "color_palette": ["neutrals (beige, grey, navy, black)", "white", "pastel colors", "corporate colors"],
+      "industries": ["受付スタッフ", "ホテル", "病院 (Clinic Reception)", "Corporate Reception"],
+      "style_keywords": ["professional", "approachable", "neat", "elegant", "trustworthy", "clean"]
+    },
+    {
+      "uniform_id": "factory_worker",
+      "uniform_name": "Factory Worker Uniform",
+      "description": "Factory worker uniform focused on safety, durability, and functionality.",
+      "key_elements": ["coveralls", "work jacket", "work pants", "safety shoes", "helmet", "safety vest", "gloves", "tool pockets"],
+      "materials": ["heavy-duty cotton", "polyester-cotton", "flame-retardant fabric", "reinforcement fabric"],
+      "color_palette": ["grey", "navy", "khaki", "green", "blue", "orange (safety)", "yellow (safety)"],
+      "industries": ["工場"],
+      "style_keywords": ["durable", "functional", "protective", "safety first", "practical", "industrial"]
+    },
+    {
+      "uniform_id": "construction_worker",
+      "uniform_name": "Construction Worker Uniform",
+      "description": "Construction worker uniform prioritizing safety and mobility in harsh environments.",
+      "key_elements": ["work suit (top and bottom)", "safety vest", "helmet", "safety boots", "safety harness", "pants with tool pockets"],
+      "materials": ["high-strength polyester", "heavy-duty cotton canvas", "waterproof breathable fabric", "reflective material"],
+      "color_palette": ["khaki", "brown", "grey", "orange (safety)", "yellow (safety)", "navy"],
+      "industries": ["建築"],
+      "style_keywords": ["rugged", "protective", "high visibility", "functional", "tough", "outdoor work"]
+    },
+    {
+      "uniform_id": "cleaning_staff",
+      "uniform_name": "Cleaning Staff Uniform",
+      "description": "Cleaning staff uniform suitable for cleaning tasks with a clean look.",
+      "key_elements": ["polo shirt", "t-shirt", "tunic", "slacks", "pants", "apron"],
+      "materials": ["polyester cotton", "quick-dry fabric", "stretch fabric"],
+      "color_palette": ["green", "blue", "grey", "white", "purple", "navy", "pastel colors"],
+      "industries": ["清掃", "ホテル", "病院", "Building Maintenance"],
+      "style_keywords": ["practical", "clean look", "comfortable", "easy to move in", "hygienic", "simple"]
+    },
+    {
+      "uniform_id": "hospital_nurse_medical",
+      "uniform_name": "Hospital Staff (Nurse/Medical) Uniform",
+      "description": "Medical staff uniform meeting hygiene standards and emphasizing functionality.",
+      "key_elements": ["scrubs (top, pants)", "white coat", "Kansai style scrub top", "nursing shoes", "medical gown", "surgical gown"],
+      "materials": ["polyester cotton (shrink-resistant, wrinkle-resistant)", "stretch fabric", "antibacterial fabric"],
+      "color_palette": ["light blue", "green", "navy", "pink", "white", "grey", "burgundy", "print patterns (pediatrics etc.)"],
+      "industries": ["病院", "Clinic"],
+      "style_keywords": ["hygienic", "functional", "comfortable", "professional", "quick-dry", "durable"]
+    },
+     {
+      "uniform_id": "hospital_doctor",
+      "uniform_name": "Hospital Staff (Doctor) Uniform",
+      "description": "Doctor's uniform maintaining authority and cleanliness.",
+      "key_elements": ["white coat (long sleeve, short sleeve)", "scrubs", "lab coat"],
+      "materials": ["cotton", "polyester cotton"],
+      "color_palette": ["white", "navy", "black (some cases)"],
+      "industries": ["病院", "クリニック", "Research Institutions"],
+      "style_keywords": ["authority", "cleanliness", "professional", "classic", "functional"]
+    },
+    {
+      "uniform_id": "caregiver_staff",
+      "uniform_name": "Caregiver Uniform",
+      "description": "Caregiver uniform considering ease of assistance and comfort for care recipients.",
+      "key_elements": ["polo shirt", "t-shirt", "tunic", "easy-fit pants", "cardigan", "apron", "stretch pants"],
+      "materials": ["polyester cotton", "stretch fabric", "knit", "fleece (outerwear)"],
+      "color_palette": ["pastel colors (pink, blue, green)", "beige", "grey", "navy", "brown", "soft colors"],
+      "industries": ["介護施設", "病院 (Geriatric Care Ward)", "Home Care"],
+      "style_keywords": ["comfortable", "easy to move in", "approachable", "hygienic", "easy to wash", "gentle impression"]
+    }
+  ],
+  "phrase_variations": {
+    "quality": [
+      "high resolution",
+      "detailed illustration",
+      "high quality photograph",
+      "professional finish",
+      "realistic texture",
+      "beautiful lighting"
+    ],
+    "photo_style": [
+      "fashion photography",
+      "catalog style",
+      "lookbook style",
+      "portrait photography",
+      "product photography",
+      "visual concept"
+    ],
+    "lighting": [
+      "natural light",
+      "studio lighting",
+      "soft lighting",
+      "dramatic lighting",
+      "even lighting",
+      "bright lighting"
+    ],
+    "resolution": [
+      "8K",
+      "4K",
+      "high resolution"
+    ],
+    "parameters": [
+      "--ar 2:3 --stylize 750",
+      "--ar 3:2 --stylize 750",
+      "--ar 1:1 --stylize 650",
+      "--ar 4:5 --stylize 800",
+      "--style raw"
+    ]
+  }
+}

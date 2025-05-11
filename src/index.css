@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ダークモードの設定 */
+@media (prefers-color-scheme: dark) {
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+/* カスタム要素のスタイリング */
+@layer components {
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-6 py-3 rounded-md transition-colors bg-blue-600 hover:bg-blue-700 text-white disabled:bg-blue-300 dark:disabled:bg-blue-900 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply flex items-center justify-center gap-2 px-4 py-2 bg-gray-600 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-all hover:shadow-lg;
+  }
+  
+  .tag {
+    @apply px-2 py-1 rounded text-sm;
+  }
+  
+  .tag-brand {
+    @apply bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100;
+  }
+  
+  .tag-era {
+    @apply bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100;
+  }
+  
+  .tag-material {
+    @apply bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100;
+  }
+  
+  .tag-silhouette {
+    @apply bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100;
+  }
+}

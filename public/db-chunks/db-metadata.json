@@ -1,0 +1,21 @@
+{
+  "totalBrands": 2,
+  "totalChunks": 1,
+  "brandsPerChunk": 2,
+  "lastUpdated": "2025-04-19T16:02:39.971Z",
+  "chunks": [
+    {
+      "id": 1,
+      "filename": "brands-chunk-1.json",
+      "brandCount": 2,
+      "brandIds": [
+        1,
+        2
+      ],
+      "brandNames": [
+        "Chanel",
+        "Dior"
+      ]
+    }
+  ]
+}

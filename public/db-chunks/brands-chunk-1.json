@@ -1,0 +1,513 @@
+{
+  "chunk_id": 1,
+  "total_chunks": 1,
+  "brands": [
+    {
+      "brand_id": 1,
+      "brand_name": "Chanel",
+      "era_start": "1910s",
+      "era_end": "present",
+      "core_style": "Effortless Elegant, Timeless Parisian Chic, Refined Sophistication, Understated Luxury, Iconic Modernity, Graceful Poise, Liberated Femininity",
+      "signature_elements": "Iconic tweed suits with contrast braid trim and patch pockets, Quilted leather 2.55 or Classic Flap bag with chain strap, Gold-tone chain details (belts, straps, jewelry), Delicate camellia flower motifs (brooch, print, appliqué), Prominent interlocking CC logo hardware/print, Layered strands of faux pearl necklaces, Comfortable and chic two-tone slingback shoes or ballet flats",
+      "materials": "Nubby bouclé tweed often with subtle sparkle or unexpected threads, Supple quilted lambskin or durable caviar leather, Fluid silk chiffon or crepe de chine for blouses, Comfortable matte jersey knits, Lustrous costume pearls and gripoix glass, Polished gold-tone or silver-tone metal hardware",
+      "silhouettes": "Signature boxy, slightly masculine cardigan jackets, Straight-cut knee-length or midi skirts, The essential 'Little Black Dress' (simple, elegant), Relaxed yet chic wide-leg trousers or slim cigarette pants, Elegant A-line dresses and coats, Effortless knit twinsets and cardigans",
+      "color_palette": "Iconic Black and White high contrast, Creamy Ecru and soft Beige neutrals, Classic Navy blue, Polished Gold or Silver metallic accents, Occasional soft blush pink, powder blue, or vibrant red tweed, Harmonious monochromatic looks",
+      "lighting": [
+        "Soft, diffused natural light (like a Parisian window)",
+        "Elegant, flattering studio softbox lighting",
+        "Chic, warm interior lighting",
+        "Glamorous soft-focus glow",
+        "Clean, bright daylight"
+      ],
+      "atmosphere_mood": [
+        "Effortless sophistication",
+        "Timeless Parisian elegance",
+        "Understated luxury and confidence",
+        "Confident and poised femininity",
+        "Modern chic with classic roots",
+        "Liberated and comfortable"
+      ],
+      "setting_background_detail": [
+        "Minimalist chic Parisian apartment interior",
+        "Clean white or pale grey studio backdrop",
+        "Abstract textured neutral wall",
+        "Iconic Chanel boutique inspired setting",
+        "Simple solid background complementing the outfit's main color"
+      ],
+      "camera_shot_type": [
+        "Eye-level full body fashion shot",
+        "Medium shot highlighting signature elements",
+        "Elegant three-quarter portrait framing",
+        "Classic fashion magazine editorial style",
+        "Close-up on iconic details"
+      ]
+    },
+    {
+      "brand_id": 2,
+      "brand_name": "Dior",
+      "era_start": "1940s",
+      "era_end": "present",
+      "core_style": "Romantic Femininity, Luxurious Opulence, Structured Elegance, Fairytale Couture, Modern Grace, Dreamlike Fantasy, Timeless Glamour",
+      "signature_elements": "Iconic 'New Look' silhouette (dramatically cinched waist, voluminous full skirt), Sculptural 'Bar' jacket, Lavish ball gown skirts, Delicate 'Cannage' pattern stitching, Lady Dior handbag, Abundant floral motifs (roses, lily-of-the-valley), Exquisite embroidery and beadwork",
+      "materials": "Crisp silk taffeta, Structured wool gabardine, Ethereal tulle and organza, Luxurious intricate hand-embroidery, Delicate Chantilly lace, Rich duchesse satin, Innovative technical couture fabrics, Fine cashmere",
+      "silhouettes": "Dramatic cinched 'wasp' waists, Full, swirling calf-length or floor-length skirts, Sharp structured shoulders, Elegant hourglass figures, Modern tailored sheath dresses, Flowing Grecian goddess gowns, Architectural cocktail dresses",
+      "color_palette": "Soft Blush Pink ('Dior Pink'), Signature Pale Dove Gray ('Dior Gray'), Classic deep Navy Blue, Intense Black, Vibrant 'Dior Red', Pure Ivory or Optic White, Subtle gold or silver accents, Romantic floral-inspired palettes",
+      "lighting": [
+        "Soft, romantic diffused lighting",
+        "Dramatic spotlight highlighting silhouette",
+        "Ethereal backlight halo",
+        "Fairytale magical light",
+        "Classic couture studio lighting"
+      ],
+      "atmosphere_mood": [
+        "Hopelessly romantic and feminine",
+        "Luxurious and opulent",
+        "Fairytale dream sequence",
+        "Elegant grace and poise",
+        "Modern couture sensibility",
+        "Timeless glamour"
+      ],
+      "setting_background_detail": [
+        "Grand Parisian salon setting",
+        "Lush secret garden backdrop",
+        "Minimalist grey studio wall",
+        "Abstract painterly background",
+        "Simple gradient background complementing garment color"
+      ],
+      "camera_shot_type": [
+        "Full length dramatic couture shot",
+        "Low angle emphasizing skirt volume",
+        "Medium shot on intricate details",
+        "Dreamy soft-focus portrait",
+        "Elegant movement capture"
+      ]
+    }
+  ],
+  "phrase_variations": {
+    "sportswear_silhouettes": [
+      {
+        "base_term": "performance",
+        "variations": [
+          "athletically optimized for peak performance",
+          "movement-engineered for maximum agility",
+          "competition-ready streamlined form",
+          "physically enhancing ergonomic design",
+          "sport-specific structured support",
+          "activity-tailored dynamic fit",
+          "ergonomically articulated for flexibility",
+          "biomechanically considered for efficiency",
+          "motion-optimized non-restrictive cut",
+          "functionally calibrated for endurance"
+        ]
+      },
+      {
+        "base_term": "streamlined",
+        "variations": [
+          "aerodynamically sculpted for speed",
+          "resistance-minimizing sleek profile",
+          "speed-optimized racing cut",
+          "friction-reducing smooth surface design",
+          "athletically contoured body-hugging fit",
+          "velocity-enhancing tapered shape",
+          "performance-smoothed aerodynamic lines",
+          "drag-resistant minimal construction",
+          "movement-efficient close fit",
+          "competitively contoured shaping"
+        ]
+      },
+      {
+        "base_term": "compression",
+        "variations": [
+          "muscle-supporting targeted compression zones",
+          "performance-enhancing graduated compression",
+          "circulation-optimizing second-skin fit",
+          "supportive, strategically placed compression panels",
+          "athletically compressed for power output",
+          "recovery-enhancing supportive structure",
+          "pressure-mapped physiological design",
+          "musculature-stabilizing tight weave",
+          "strategically constricting for reduced vibration"
+        ]
+      }
+    ],
+    "sportswear_materials": [
+      {
+        "base_term": "technical performance",
+        "variations": [
+          "athletically engineered breathable synthetic",
+          "performance-optimized lightweight composite",
+          "competition-grade advanced polymer",
+          "activity-specific technical knit/weave",
+          "sport-engineered durable textile",
+          "movement-enhancing four-way stretch fabric",
+          "performance-calibrated temperature-regulating material",
+          "athletic-grade abrasion-resistant synthetic",
+          "sports science developed innovative fiber",
+          "technically advanced waterproof-breathable membrane"
+        ]
+      },
+      {
+        "base_term": "compression",
+        "variations": [
+          "muscle-supporting high-elastane knit",
+          "graduated pressure power-stretch textile",
+          "circulation-enhancing seamless compression weave",
+          "strategic compression mapping fabric",
+          "performance-supporting responsive elastane blend",
+          "recovery-optimized engineered knit structure",
+          "athletic compression with moisture management",
+          "muscular support bonded paneling",
+          "biomechanical compression warp knit",
+          "physiologically engineered elasticated textile"
+        ]
+      },
+      {
+        "base_term": "moisture-wicking",
+        "variations": [
+          "sweat-transferring capillary action fabric",
+          "humidity-managing hydrophobic technical weave",
+          "perspiration-channeling micro-grooved textile",
+          "moisture-displacing quick-dry engineered knit",
+          "fast-drying performance polyester blend",
+          "hydrophobic treated athletic mesh",
+          "sweat-management technical layering system",
+          "moisture-repelling durable water repellent (DWR) finish",
+          "dry-touch athletic microfibre",
+          "sweat-control engineered ventilation panels"
+        ]
+      }
+    ],
+    "background_styles": [
+      "minimalist studio background",
+      "simple solid color background",
+      "soft gradient background",
+      "clean uncluttered backdrop",
+      "neutral tone background",
+      "plain wall setting",
+      "abstract textured background",
+      "soft focus background",
+      "plain concrete wall",
+      "seamless paper backdrop",
+      "industrial metal sheet background",
+      "rich velvet curtain backdrop"
+    ],
+    "background_color_phrases": [
+      {
+        "template": "set against a [background_style] subtly matching the garment's [primary_color]",
+        "variations": {
+          "background_style": [
+            "minimalist studio",
+            "simple solid color",
+            "soft gradient",
+            "clean uncluttered",
+            "abstract textured",
+            "plain wall",
+            "seamless paper"
+          ]
+        }
+      },
+      {
+        "template": "with a [background_style] in a complementary tone to the outfit's [primary_color]",
+        "variations": {
+          "background_style": [
+            "neutral tone",
+            "plain wall",
+            "simple",
+            "soft focus",
+            "concrete",
+            "textured"
+          ]
+        }
+      },
+      {
+        "template": "featuring a [background_style] echoing the [color_tone] palette of the clothing",
+        "variations": {
+          "background_style": [
+            "soft focus",
+            "gradient",
+            "minimalist",
+            "textured",
+            "seamless paper",
+            "velvet curtain"
+          ]
+        }
+      },
+      {
+        "template": "on a simple gradient background blending the outfit's [primary_color] and [secondary_color]",
+        "variations": {}
+      },
+      {
+        "template": "against a clean, neutral [background_style] highlighting the [primary_color] details",
+        "variations": {
+          "background_style": [
+            "backdrop",
+            "wall",
+            "setting",
+            "concrete"
+          ]
+        }
+      },
+      {
+        "template": "showcased on a simple [primary_color] monochromatic [background_style] with subtle texture",
+        "variations": {
+          "background_style": [
+            "background",
+            "backdrop",
+            "wall",
+            "paper backdrop"
+          ]
+        }
+      },
+      {
+        "template": "positioned against a [background_style] in a lighter/darker shade of the garment's [primary_color]",
+        "variations": {
+          "background_style": [
+            "plain",
+            "gradient",
+            "solid color",
+            "textured wall"
+          ]
+        }
+      },
+      {
+        "template": "contrasting sharply with a simple [background_style] in [contrasting_color]",
+        "variations": {
+          "background_style": [
+            "solid color",
+            "minimalist",
+            "plain wall"
+          ]
+        }
+      }
+    ],
+    "lighting_variations": [
+      {
+        "base_term": "dramatic",
+        "variations": [
+          "High-contrast chiaroscuro",
+          "Sculptural spotlighting",
+          "Rim lighting silhouette",
+          "Film noir shadows",
+          "Single harsh overhead light"
+        ]
+      },
+      {
+        "base_term": "soft",
+        "variations": [
+          "Diffused daylight through window",
+          "Gentle softbox illumination",
+          "Ethereal backlit glow",
+          "Warm ambient light",
+          "Cloudy day overcast light"
+        ]
+      },
+      {
+        "base_term": "studio",
+        "variations": [
+          "Clean high-key lighting",
+          "Neutral balanced studio light",
+          "Single source key light",
+          "Professional fashion clamshell lighting",
+          "Three-point lighting setup"
+        ]
+      },
+      {
+        "base_term": "natural",
+        "variations": [
+          "Golden hour warmth",
+          "Overcast diffused daylight",
+          "Dappled sunlight through leaves",
+          "Crisp morning light",
+          "Blue hour twilight ambiance"
+        ]
+      },
+      {
+        "base_term": "colored",
+        "variations": [
+          "Neon glow highlights",
+          "Gel filtered colored light",
+          "Projected abstract color patterns",
+          "Cyberpunk inspired lighting"
+        ]
+      }
+    ],
+    "atmosphere_mood_variations": [
+      {
+        "base_term": "romantic",
+        "variations": [
+          "Dreamlike and ethereal",
+          "Nostalgic and tender",
+          "Passionate intensity",
+          "Whimsical fairytale charm",
+          "Melancholic beauty"
+        ]
+      },
+      {
+        "base_term": "minimalist",
+        "variations": [
+          "Serene and tranquil",
+          "Intellectual austerity",
+          "Clean and pure",
+          "Understated confidence",
+          "Zen-like calm"
+        ]
+      },
+      {
+        "base_term": "futuristic",
+        "variations": [
+          "Sleek and technological",
+          "Dystopian and gritty",
+          "Otherworldly and alien",
+          "Cyberpunk neon chaos",
+          "Utopian clean lines"
+        ]
+      },
+      {
+        "base_term": "glamorous",
+        "variations": [
+          "Opulent and luxurious",
+          "Red carpet ready",
+          "Seductive and confident",
+          "Sparkling disco energy",
+          "Old Hollywood elegance"
+        ]
+      },
+      {
+        "base_term": "powerful",
+        "variations": [
+          "Commanding and authoritative",
+          "Strong and resilient",
+          "Aggressively confident",
+          "Heroic and epic",
+          "Intimidating presence"
+        ]
+      },
+      {
+        "base_term": "playful",
+        "variations": [
+          "Whimsical and lighthearted",
+          "Youthful energy",
+          "Irreverent humor",
+          "Joyful celebration",
+          "Eclectic fun"
+        ]
+      }
+    ],
+    "camera_shot_type_variations": [
+      {
+        "base_term": "full body",
+        "variations": [
+          "Dynamic action pose",
+          "Static elegant stance",
+          "Wide angle environmental portrait",
+          "Classic head-to-toe fashion shot",
+          "Walking towards camera shot"
+        ]
+      },
+      {
+        "base_term": "medium shot",
+        "variations": [
+          "Focus on torso and details",
+          "Waist-up portrait",
+          "Highlighting textile texture",
+          "Capturing interaction with accessory",
+          "Three-quarter view"
+        ]
+      },
+      {
+        "base_term": "close-up",
+        "variations": [
+          "Extreme close-up on embroidery/beadwork",
+          "Detail shot of hardware/logo",
+          "Focus on facial expression/makeup",
+          "Texture macro shot",
+          "Shoe focus shot"
+        ]
+      },
+      {
+        "base_term": "angle",
+        "variations": [
+          "Dramatic low angle looking up",
+          "Intimate high angle looking down",
+          "Intriguing Dutch angle tilt",
+          "Standard eye-level perspective",
+          "Over-the-shoulder view"
+        ]
+      },
+      {
+        "base_term": "framing",
+        "variations": [
+          "Centered symmetrical composition",
+          "Rule of thirds asymmetrical framing",
+          "Abstract cropped framing",
+          "Cinematic wide aspect ratio",
+          "Portrait vertical orientation"
+        ]
+      }
+    ],
+    "general_silhouette_variations": [
+      {
+        "base_term": "oversized",
+        "variations": [
+          "Exaggerated volume",
+          "Cocoon shape",
+          "Billowing form",
+          "Slouchy and relaxed",
+          "Architectural structure"
+        ]
+      },
+      {
+        "base_term": "fitted",
+        "variations": [
+          "Body-conscious cut",
+          "Second-skin silhouette",
+          "Tailored precision fit",
+          "Sculpted to the form",
+          "Corseted waist"
+        ]
+      },
+      {
+        "base_term": "asymmetrical",
+        "variations": [
+          "Uneven hemlines",
+          "Off-kilter draping",
+          "One-shoulder design",
+          "Deconstructed balance",
+          "Skewed proportions"
+        ]
+      }
+    ],
+    "general_material_variations": [
+      {
+        "base_term": "textured",
+        "variations": [
+          "Nubby knit",
+          "Rough boucle",
+          "Pleated surface",
+          "Embossed pattern",
+          "Crinkled finish"
+        ]
+      },
+      {
+        "base_term": "shiny",
+        "variations": [
+          "High-gloss patent",
+          "Liquid metal effect",
+          "Satin sheen",
+          "Iridescent shimmer",
+          "Sequined sparkle"
+        ]
+      },
+      {
+        "base_term": "sheer",
+        "variations": [
+          "Transparent chiffon",
+          "Delicate organza",
+          "Fine mesh overlay",
+          "See-through lace",
+          "Gossamer tulle"
+        ]
+      }
+    ]
+  }
+}

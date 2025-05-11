@@ -1,0 +1,15 @@
+{
+  "name": "split-database",
+  "version": "1.0.0",
+  "description": "Tool to split the fashion database into smaller chunks",
+  "main": "split-database.js",
+  "scripts": {
+    "split": "node split-database.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
