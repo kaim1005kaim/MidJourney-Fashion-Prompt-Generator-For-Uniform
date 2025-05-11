@@ -5,6 +5,24 @@ import { generateEnhancedPrompt, generateEnhancedPrompts, EnhancedPromptOptions 
 import PromptCard from './PromptCard';
 import { Wand2, Settings2, Copy, Check, ChevronDown, ChevronUp, RefreshCw, Filter, X } from 'lucide-react';
 
+// 制服タイプの英語→日本語変換
+const uniformTypeTranslations: { [key: string]: string } = {
+  "Caregiver Uniform": "介護士制服",
+  "Cleaning Staff Uniform": "清掃スタッフ制服",
+  "Construction Worker Uniform": "建設作業員制服",
+  "Event Staff (General) Uniform": "イベントスタッフ制服",
+  "Factory Worker Uniform": "工場作業員制服",
+  "Hospital Staff (Doctor) Uniform": "病院スタッフ(医師)制服",
+  "Hospital Staff (Nurse/Medical) Uniform": "病院スタッフ(看護師/医療)制服",
+  "Hotel Housekeeping Uniform": "ホテルハウスキーピング制服",
+  "Hotel Staff (Front/Bell) Uniform": "ホテルスタッフ(フロント/ベル)制服",
+  "Railway Staff Uniform": "鉄道スタッフ制服",
+  "Receptionist Uniform": "受付スタッフ制服",
+  "Restaurant Chef / Kitchen Staff Uniform": "レストランシェフ/キッチンスタッフ制服",
+  "Restaurant Staff (Casual) Uniform": "レストランスタッフ(カジュアル)制服",
+  "Restaurant Staff (Formal) Uniform": "レストランスタッフ(フォーマル)制服"
+};
+
 interface EnhancedPromptGeneratorProps {
   uniformTypes: UniformType[];
   phraseVariations: PhraseVariations;
@@ -232,7 +250,7 @@ export default function EnhancedPromptGenerator({
                 <option value="">ランダム選択</option>
                 {uniformTypes.map((uniform) => (
                   <option key={uniform.uniform_id} value={uniform.uniform_id}>
-                    {uniform.uniform_name}
+                    {uniformTypeTranslations[uniform.uniform_name] || uniform.uniform_name}
                   </option>
                 ))}
               </select>
