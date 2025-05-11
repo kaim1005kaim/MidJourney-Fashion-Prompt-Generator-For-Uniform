@@ -152,7 +152,6 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     const lighting = getRandomElement(phraseVariations.lighting, "studio lighting");
     const quality = getRandomElement(phraseVariations.quality, "high quality");
     const resolution = getRandomElement(phraseVariations.resolution, "8k resolution");
-    const parameters = getRandomElement(phraseVariations.parameters, "--ar 4:5 --stylize 750");
     
     // プロンプトの基本部分を構築
     // 全身ショットを指定するために "A full-body shot" を追加
@@ -175,8 +174,20 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     // プロンプトの最終形成
     let promptText = promptBase;
     
-    // パラメータを追加
-    promptText += ` ${parameters}`;
+    // アスペクト比設定を追加
+    if (settings.includeAspectRatio) {
+      promptText += ` ${settings.aspectRatio}`;
+    }
+    
+    // バージョン設定を追加
+    if (settings.includeVersion) {
+      promptText += ` ${settings.version}`;
+    }
+    
+    // スタイライズ設定を追加
+    if (settings.includeStylize) {
+      promptText += ` --stylize ${settings.stylize}`;
+    }
     
     // カスタムサフィックスを追加
     if (settings.customSuffix) {
@@ -203,7 +214,7 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
       lighting,
       quality,
       resolution,
-      parameters
+      parameters: `${settings.includeAspectRatio ? settings.aspectRatio : ''} ${settings.includeVersion ? settings.version : ''} ${settings.includeStylize ? '--stylize ' + settings.stylize : ''}`
     };
     
     attempts++;
