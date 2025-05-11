@@ -11,6 +11,7 @@ interface EnhancedPromptGeneratorProps {
   filters?: FilterOptions;
   settings: AppSettings;
   onCopy?: (prompt: string) => void;
+  onSettingsChange?: (settings: AppSettings) => void;
 }
 
 export default function EnhancedPromptGenerator({
@@ -18,7 +19,8 @@ export default function EnhancedPromptGenerator({
   phraseVariations,
   filters,
   settings,
-  onCopy
+  onCopy,
+  onSettingsChange
 }: EnhancedPromptGeneratorProps) {
   // 状態
   const [prompts, setPrompts] = useState<Prompt[]>([]);
@@ -234,6 +236,197 @@ export default function EnhancedPromptGenerator({
                   </option>
                 ))}
               </select>
+            </div>
+          </div>
+          
+          {/* 共通オプション */}
+          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">共通設定</h3>
+            
+            {/* 日本人モデル設定 */}
+            <div className="flex flex-col gap-1 mb-3">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="enhanced-japanese-model"
+                  checked={settings.useJapaneseModel}
+                  onChange={(e) => {
+                    if (onSettingsChange) {
+                      onSettingsChange({
+                        ...settings,
+                        useJapaneseModel: e.target.checked
+                      });
+                    }
+                  }}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="enhanced-japanese-model" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  日本人モデルを使用する
+                </label>
+              </div>
+              <p className="ml-6 text-xs text-gray-500 dark:text-gray-400">
+                プロンプトに「Japanese person」または「Asian person」を追加します
+              </p>
+            </div>
+            
+            {/* アスペクト比設定 */}
+            <div className="flex flex-col gap-1 mb-3">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="enhanced-include-ar"
+                  checked={settings.includeAspectRatio}
+                  onChange={(e) => {
+                    if (onSettingsChange) {
+                      onSettingsChange({
+                        ...settings,
+                        includeAspectRatio: e.target.checked
+                      });
+                    }
+                  }}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="enhanced-include-ar" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  アスペクト比を含める
+                </label>
+              </div>
+              {settings.includeAspectRatio && (
+                <div className="ml-6">
+                  <select
+                    value={settings.aspectRatio}
+                    onChange={(e) => {
+                      if (onSettingsChange) {
+                        onSettingsChange({
+                          ...settings,
+                          aspectRatio: e.target.value
+                        });
+                      }
+                    }}
+                    className="block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+                  >
+                    <option value="--ar 4:5">縦長 - Instagram推奨 (4:5)</option>
+                    <option value="--ar 1:1">正方形 (1:1)</option>
+                    <option value="--ar 3:2">標準写真 (3:2)</option>
+                    <option value="--ar 16:9">16:9 ワイドスクリーン</option>
+                    <option value="--ar 2:1">パノラマ (2:1)</option>
+                  </select>
+                </div>
+              )}
+            </div>
+            
+            {/* バージョン設定 */}
+            <div className="flex flex-col gap-1 mb-3">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="enhanced-include-version"
+                  checked={settings.includeVersion}
+                  onChange={(e) => {
+                    if (onSettingsChange) {
+                      onSettingsChange({
+                        ...settings,
+                        includeVersion: e.target.checked
+                      });
+                    }
+                  }}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="enhanced-include-version" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  バージョンを含める
+                </label>
+              </div>
+              {settings.includeVersion && (
+                <div className="ml-6">
+                  <select
+                    value={settings.version}
+                    onChange={(e) => {
+                      if (onSettingsChange) {
+                        onSettingsChange({
+                          ...settings,
+                          version: e.target.value
+                        });
+                      }
+                    }}
+                    className="block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+                  >
+                    <option value="--v 7.0">v7.0 (最新版)</option>
+                    <option value="--v 6.0">v6.0</option>
+                    <option value="--v 5.2">v5.2</option>
+                    <option value="--v 5.1">v5.1</option>
+                    <option value="--v 4.0">v4.0</option>
+                  </select>
+                </div>
+              )}
+            </div>
+            
+            {/* スタイライズ設定 */}
+            <div className="flex flex-col gap-1 mb-3">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="enhanced-include-stylize"
+                  checked={settings.includeStylize}
+                  onChange={(e) => {
+                    if (onSettingsChange) {
+                      onSettingsChange({
+                        ...settings,
+                        includeStylize: e.target.checked
+                      });
+                    }
+                  }}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="enhanced-include-stylize" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  スタイライズを含める
+                </label>
+              </div>
+              {settings.includeStylize && (
+                <div className="ml-6">
+                  <select
+                    value={settings.stylize}
+                    onChange={(e) => {
+                      if (onSettingsChange) {
+                        onSettingsChange({
+                          ...settings,
+                          stylize: e.target.value
+                        });
+                      }
+                    }}
+                    className="block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white text-sm"
+                  >
+                    <option value="s100">s100 (標準)</option>
+                    <option value="s250">s250 (中程度)</option>
+                    <option value="s500">s500 (強)</option>
+                    <option value="s750">s750 (非常に強)</option>
+                    <option value="s1000">s1000 (最大)</option>
+                  </select>
+                </div>
+              )}
+            </div>
+            
+            {/* カスタムサフィックス */}
+            <div>
+              <label htmlFor="enhanced-custom-suffix" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                カスタムサフィックス
+              </label>
+              <input
+                type="text"
+                id="enhanced-custom-suffix"
+                value={settings.customSuffix}
+                onChange={(e) => {
+                  if (onSettingsChange) {
+                    onSettingsChange({
+                      ...settings,
+                      customSuffix: e.target.value
+                    });
+                  }
+                }}
+                placeholder="例: --stop 80 --raw"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white text-sm"
+              />
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                すべてのプロンプトの末尾に追加するパラメータを指定します
+              </p>
             </div>
           </div>
           

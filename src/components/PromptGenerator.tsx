@@ -588,6 +588,7 @@ export default function PromptGenerator() {
             filters={filters}
             settings={settings}
             onCopy={copyPrompt}
+            onSettingsChange={handleSettingsChange}
           />
         )}
       </div>
