@@ -8,6 +8,7 @@ export interface UniformType {
   color_palette: string[];
   industries: string[];
   style_keywords: string[];
+  gender?: string; // 性別（unisex, male, female）
 }
 
 export interface Prompt {
@@ -24,6 +25,7 @@ export interface Prompt {
   element?: string;
   color?: string;
   industry?: string;
+  gender?: string;
   styleKeywords?: string[];
   photoStyle?: string;
   lighting?: string;
@@ -38,6 +40,7 @@ export interface PhraseVariations {
   lighting: string[];
   resolution: string[];
   parameters: string[];
+  gender?: string[]; // 性別バリエーション（"male model", "female model"）
 }
 
 export interface FilterOptions {
@@ -46,6 +49,7 @@ export interface FilterOptions {
   styles: string[]; // Selected style elements
   materials: string[]; // Selected material types
   colors: string[]; // Selected colors
+  genders: string[]; // Selected genders
 }
 
 export interface AspectRatioOption {

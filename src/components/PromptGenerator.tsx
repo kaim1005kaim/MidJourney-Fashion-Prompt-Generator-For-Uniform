@@ -24,7 +24,8 @@ const defaultFilters: FilterOptions = {
   industries: [],
   styles: [],
   materials: [],
-  colors: []
+  colors: [],
+  genders: []
 };
 
 export default function PromptGenerator() {

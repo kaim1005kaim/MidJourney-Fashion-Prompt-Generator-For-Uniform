@@ -11,8 +11,8 @@ interface GenerateOptions {
 
 // 重複チェック用の簡易ハッシュ関数
 function getPromptHash(prompt: Prompt): string {
-  // ユニフォーム名、素材、要素、色、業界の組み合わせをハッシュとして使用
-  return `${prompt.uniformName}-${prompt.material}-${prompt.element}-${prompt.color}-${prompt.industry}`;
+  // ユニフォーム名、素材、要素、色、業界、性別の組み合わせをハッシュとして使用
+  return `${prompt.uniformName}-${prompt.material}-${prompt.element}-${prompt.color}-${prompt.industry}-${prompt.gender}`;
 }
 
 // プロンプトが既存のプロンプトと重複しているかチェック
@@ -121,6 +121,32 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     const industry = uniform.industries.length > 0 ? getRandomElement(uniform.industries) : '';
     const styleKeyword = getRandomElement(uniform.style_keywords);
     
+    // 性別を選択（フィルターに基づく）
+    let gender = "unisex";
+    let genderModel = "";
+    
+    if (filters && filters.genders && filters.genders.length > 0) {
+      // フィルターで性別が指定されている場合はその中からランダムに選択
+      gender = getRandomElement(filters.genders);
+      
+      // 性別に応じたモデル指定を追加
+      if (gender === "male" && phraseVariations.gender && phraseVariations.gender.length > 0) {
+        const maleModelPhrases = phraseVariations.gender.filter(p => p.includes("male"));
+        if (maleModelPhrases.length > 0) {
+          genderModel = getRandomElement(maleModelPhrases);
+        } else {
+          genderModel = "male model";
+        }
+      } else if (gender === "female" && phraseVariations.gender && phraseVariations.gender.length > 0) {
+        const femaleModelPhrases = phraseVariations.gender.filter(p => p.includes("female"));
+        if (femaleModelPhrases.length > 0) {
+          genderModel = getRandomElement(femaleModelPhrases);
+        } else {
+          genderModel = "female model";
+        }
+      }
+    }
+    
     // プロンプト変数を選択
     const photoStyle = getRandomElement(phraseVariations.photo_style, "professional photograph");
     const lighting = getRandomElement(phraseVariations.lighting, "studio lighting");
@@ -129,7 +155,8 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     const parameters = getRandomElement(phraseVariations.parameters, "--ar 4:5 --stylize 750");
     
     // プロンプトの基本部分を構築
-    let promptBase = `A ${photoStyle} of a`;
+    // 全身ショットを指定するために "A full-body shot" を追加
+    let promptBase = `A ${photoStyle} of a full-body shot of ${genderModel ? genderModel + " wearing a" : "person wearing a"}`;
     
     // 業界が指定されている場合は追加
     if (industry) {
@@ -138,6 +165,9 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
     
     // 制服名と説明を追加
     promptBase += ` ${uniform.uniform_name}, ${styleKeyword}, ${element}, ${color} ${material}`;
+    
+    // 人物は一人だけであることを明示
+    promptBase += `, single person`;
     
     // ライティングと品質設定を追加
     promptBase += `, ${lighting}, ${quality}, ${resolution}, photorealistic`;
@@ -167,6 +197,7 @@ export function generateSinglePrompt(options: GenerateOptions): Prompt {
       element,
       color,
       industry,
+      gender,
       styleKeywords: [styleKeyword],
       photoStyle,
       lighting,
