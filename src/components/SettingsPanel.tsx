@@ -123,6 +123,25 @@ export default function SettingsPanel({ settings, onSettingsChange, onDatabaseUp
               </p>
             </div>
             
+            {/* 自然言語構造設定 */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="use-natural-language"
+                  checked={settings.useNaturalLanguage !== undefined ? settings.useNaturalLanguage : true}
+                  onChange={(e) => handleSettingChange('useNaturalLanguage', e.target.checked)}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+                />
+                <label htmlFor="use-natural-language" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                  自然言語構造を使用する
+                </label>
+              </div>
+              <p className="ml-6 text-xs text-gray-500 dark:text-gray-400">
+                プロンプトを「A photo of a person wearing...」のような自然な文章にします
+              </p>
+            </div>
+            
             {/* アスペクト比設定 */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center">

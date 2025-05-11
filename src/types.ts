@@ -78,4 +78,5 @@ export interface AppSettings {
   stylize: string; // 選択されたスタイライズ値
   customSuffix: string;
   useJapaneseModel: boolean; // 日本人モデルを使用するかどうか
+  useNaturalLanguage: boolean; // 自然言語構造を使用するかどうか
 }

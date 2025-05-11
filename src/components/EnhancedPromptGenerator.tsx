@@ -57,6 +57,7 @@ export default function EnhancedPromptGenerator({
   const [promptCount, setPromptCount] = useState(settings.promptCount);
   const [isCopied, setIsCopied] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [selectedGender, setSelectedGender] = useState<string>("");
   
   // プロンプト生成
   const generatePrompts = () => {
@@ -74,6 +75,12 @@ export default function EnhancedPromptGenerator({
       // 選択された制服ID（なければランダム）
       const uniformId = selectedUniformId || undefined;
       
+      // 選択された性別をフィルターに追加
+      const currentFilters = { ...filters };
+      if (selectedGender) {
+        currentFilters.genders = [selectedGender];
+      }
+      
       // オプションの準備
       const options: EnhancedPromptOptions = {
         ...generationOptions,
@@ -85,7 +92,7 @@ export default function EnhancedPromptGenerator({
         uniformTypes,
         phraseVariations,
         promptCount,
-        filters,
+        currentFilters,
         settings,
         options
       );
@@ -255,6 +262,45 @@ export default function EnhancedPromptGenerator({
                 ))}
               </select>
             </div>
+          </div>
+          
+          {/* 性別選択 */}
+          <div className="mt-4">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              性別
+            </label>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setSelectedGender(selectedGender === "male" ? "" : "male")}
+                className={`px-4 py-2 rounded-md transition-colors ${selectedGender === "male"
+                  ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 border border-blue-200 dark:border-blue-700'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                男性
+              </button>
+              <button
+                onClick={() => setSelectedGender(selectedGender === "female" ? "" : "female")}
+                className={`px-4 py-2 rounded-md transition-colors ${selectedGender === "female"
+                  ? 'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-100 border border-pink-200 dark:border-pink-700'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                女性
+              </button>
+              <button
+                onClick={() => setSelectedGender("")}
+                className={`px-4 py-2 rounded-md transition-colors ${selectedGender === ""
+                  ? 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100 border border-purple-200 dark:border-purple-700'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                ユニセックス
+              </button>
+            </div>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              性別を選択すると、プロンプトにその性別が反映されます。ユニセックスを選択または無選択の場合、「person」が使用されます。
+            </p>
           </div>
           
           {/* 共通オプション */}

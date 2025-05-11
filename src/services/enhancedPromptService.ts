@@ -463,6 +463,12 @@ export function generateEnhancedPrompt(
     // スタイライズ設定を追加
     if (appSettings.includeStylize) {
       promptText += ` --stylize ${appSettings.stylize}`;
+    } else {
+      // スタイライズがオフの場合は何も追加しない
+      if (promptText.includes(" --style") || promptText.includes(" --stylize")) {
+        // すでに入っている場合は削除するための正規表現処理
+        promptText = promptText.replace(/\s--stylize\s+\w+/g, '');
+      }
     }
     
     // ベースパラメータを追加（適用されていない場合）
